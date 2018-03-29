@@ -47,7 +47,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .mobile-nav-group {
   border-radius: 2px;
   margin-bottom: 15px;

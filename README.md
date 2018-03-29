@@ -1,8 +1,13 @@
-# personal-components-library
+# vxui
 
 > xu
 
-## Build Setup
+> A Vue.js project
+
+## 项目描述
+
+模仿vui,搭建的VUE 库  
+
 
 ``` bash
 # install dependencies

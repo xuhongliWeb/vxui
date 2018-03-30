@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name:'v-hello',
+  name:'vx-hello',
   props:{
       message:String
   }

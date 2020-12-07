@@ -30,7 +30,7 @@ const createLintingRule = () => ({
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 })
-
+console.log(__dirname,'__dirname')
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
@@ -71,6 +71,17 @@ module.exports = {
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
+      // {
+      //   test: /\.scss$/,
+      //   use: ['style-loader', 'css-loader', 'sass-loader', {
+      //       loader: 'style-resources-loader',
+      //       options: {
+      //           patterns: [
+      //             path.resolve(resolve('packages'),'/vxui-css/src/common/variable.scss')
+      //           ]
+      //       }
+      //   }]
+      // },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',

@@ -14,6 +14,36 @@
             {
               "path": "/button",
               "title": "Button"
+            },
+            {
+              "path": "/input",
+              "title": "Input"
+            }
+          ]
+        },
+        {
+          "groupName": "测试专用",
+          "list": [
+            {
+              "path": "/debounce",
+              "title": "防抖"
+            },
+            {
+              "path": "/throttle",
+              "title": "节流"
+            }
+          ]
+        },
+        {
+          "groupName": "反馈组件",
+          "list": [
+            {
+              "path": "/hello",
+              "title": "Hello"
+            },
+            {
+              "path": "/button",
+              "title": "Button"
             }
           ]
         }

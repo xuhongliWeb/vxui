@@ -1,9 +1,18 @@
 import Hello from '../packages/hello'
 import Button from '../packages/button'
-const install = function(Vue) {
+import Input from '../packages/input'
+import debounce from '../packages/debounce'
+import throttle from '../packages/throttle'
+const arr = [Hello, Button, debounce, throttle, Input]
+const install = function (Vue) {
   if (install.installed) return
-  Vue.component(Hello.name, Hello)
-  Vue.component(Button.name, Button)
+  arr.forEach((item) => {
+    Vue.component(item.name, item)
+  })
+  // Vue.component(Hello.name, Hello)
+  // Vue.component(Button.name, Button)
+  // Vue.component(Button.name, Button)
+  // Vue.component(throttle.name, Buttthrottleon)
 }
 
 if (typeof window !== 'undefined' && window.Vue) {

@@ -1,7 +1,7 @@
 <template>
-  <component :is="tag" class="vx-button" :class="[type ? 'vx-button-'+type : '',{'is-round':round}]">
-      {{type}}
+  <component :is="tag" class="vx-button" :class="[type ? 'vx-button-'+type : '',{'is-round':round},{'is-disabled': disabled}]" @click="event => !disabled && $emit('click',event)">
      <i :class="icon" v-if="icon"></i>
+     <slot></slot>
   </component>
 </template>
 <script>
@@ -20,6 +20,10 @@ export default {
     icon:{
         type:String,
         default:''
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -44,6 +48,10 @@ export default {
   }
   &.is-round{
       border-radius: 20px;
+  }
+  &.is-disabled {
+    border-color:#ccc;
+    background-color: #ccc;
   }
 }
 .vx-button-primary{

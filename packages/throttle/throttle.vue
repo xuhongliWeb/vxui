@@ -1,5 +1,6 @@
 <template>
-  <div>节流</div>
+  <div>
+  </div>
 </template>
 <script>
 export default {

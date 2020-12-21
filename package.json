@@ -63,6 +63,7 @@
     "shelljs": "^0.7.6",
     "style-resources-loader": "^1.4.1",
     "uglifyjs-webpack-plugin": "^1.1.1",
+    "underscore": "^1.12.0",
     "url-loader": "^0.5.8",
     "vue-cli-plugin-style-resources-loader": "~0.1.4",
     "vue-jest": "^1.0.2",

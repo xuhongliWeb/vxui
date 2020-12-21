@@ -25,6 +25,10 @@
           "groupName": "测试专用",
           "list": [
             {
+              "path": "/vmodel",
+              "title": "v-vmodel"
+            },
+            {
               "path": "/debounce",
               "title": "防抖"
             },

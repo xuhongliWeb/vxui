@@ -22,7 +22,7 @@
           ]
         },
         {
-          "groupName": "测试专用",
+          "groupName": "练习专用",
           "list": [
             {
               "path": "/vmodel",
@@ -35,6 +35,10 @@
             {
               "path": "/throttle",
               "title": "节流"
+            },
+            {
+              "path": "/Promise",
+              "title": "Promise的实现"
             }
           ]
         },

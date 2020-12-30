@@ -5,7 +5,6 @@ import navConfig from './nav.config.json'
 import routes from './router.config'
 import Vui from 'src/index'
 import isMobile from './is-mobile.js'
-
 import 'packages/vxui-css/src/index.scss'
 import DemoList from './components/demo-list.vue'
 
@@ -30,6 +29,8 @@ router.beforeEach((route, redirect, next) => {
   if (route.path !== '/') {
     window.scrollTo(0, 0)
   }
+console.log(isMobile, 'isMobile')
+
   const pathname = isProduction ? '/vxui/' : '/'
   if (!isMobile) {
     window.location.replace(pathname)

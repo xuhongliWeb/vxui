@@ -6,7 +6,35 @@
   'have-suffix-icon':suffixIcon
   }
   ]">
-  <input :type="type" v-bind="$attrs" v-on="inputListeners" :value="inputVal"  :class="['vx__input-field']" placeholder="请输入...">
+    <textarea
+      v-if="type === 'textarea'"
+      :disabled="disabled"
+      class="input__textarea-inner c-normal c-size-m"
+      :value="inputVal"
+      v-on="inputListeners"
+    />
+    <template v-else>
+      <span v-if="prefixIcon" class="input__icon" :name="prefixIcon" >
+        图标
+      </span>
+      <slot name="prepend"></slot>
+        <input 
+        :type="type" 
+        :disabled="disabled" 
+        v-bind="$attrs" 
+        v-on="inputListeners"
+        :value="inputVal" 
+        :class="['vx__input-field', 
+        {
+          'have-prepand': havePrepand,
+          'have-append': haveAppend
+          }]"
+         placeholder="请输入..." />  
+      <slot name="append"></slot>
+        <span v-if="suffixIcon" class="input__icon" :name="suffixIcon" >
+        图标
+      </span>
+    </template>
   </div>
 </template>
 <script>
@@ -18,23 +46,27 @@ export default {
   props: {
     prefixIcon: {
       type: String,
-      default:''
+      default: ''
     },
     suffixIcon: {
       type: String,
-      default:''
+      default: ''
     },
     type: {
       type: String,
       defalut: 'text'
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     value: {
-      type: [String,Number],
+      type: [String, Number],
       defalut: ''
     },
-    model : {
-      prop: 'value', 
-      event: 'input' // input 
+    model: {
+      prop: 'value',
+      event: 'input' // input
     }
   },
   data() {
@@ -42,19 +74,25 @@ export default {
       inputVal: ''
     }
   },
-  created()  {
+  created() {
     console.log(this.$listeners, 'crated')
   },
   computed: {
+    havePrepand() {
+      return this.$slots.prepend;
+    },
+    haveAppend() {
+      return this.$slots.append;
+    },
     inputListeners() {
-      return Object.assign({},this.$listeners, {
-        input:event => this.$emit('input',event.target.value)
+      return Object.assign({}, this.$listeners, {
+        input: event => this.$emit('input', event.target.value)
       })
     }
   },
   watch: {
     value: {
-      handler: function (n,o) {
+      handler: function(n, o) {
         this.inputVal = n
       },
       immediate: true
@@ -75,7 +113,7 @@ export default {
   &.have-suffix-icon {
     padding-right: 40px;
   }
-  &-field  {
+  &-field {
     display: block;
     box-sizing: border-box;
     width: 100%;

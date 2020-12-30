@@ -7,7 +7,10 @@ import Vui from 'src/index'
 import isMobile from './is-mobile.js'
 import 'packages/vxui-css/src/index.scss'
 import DemoList from './components/demo-list.vue'
+import Vant from 'vant';
+import 'vant/lib/index.css';
 
+Vue.use(Vant);
 Vue.use(Vui)
 Vue.use(VueRouter)
 const isProduction = process.env.NODE_ENV === 'production'

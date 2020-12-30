@@ -4,8 +4,8 @@
 ```html
 <template>
     <div class="Input-page">
-        <v-Input message="my component library" @click="handleClick"></v-Input>
-        <p>{{msg}}</p>
+      <vx-Input  @click="handleClick"></vx-Input>
+      <vx-Input type="textarea" @click="handleClick"></vx-Input>
     </div>
 </template>
 <script>
@@ -13,7 +13,7 @@
         name:'my-Input',
         data(){
             return {
-                msg:'Input'
+              msg:'Input'
             }
         },
         methods:{
@@ -25,10 +25,12 @@
 </script>
 ```
 ### Attributes
-|参数     |说明      | 类型   | 可选值   | 默认值   |
-|---------|--------|--------|--------|--------|
-|message | 文本信息   | string | - | Input
+参数 | 说明 | 类型 | 可选值 | 默认值
+--- | --- | --- | --- | ---
+`type` | 类型 | String | text，textarea 和其他 原生 input 的 type 值 | text
+`prefix-icon` | 输入框头部图标 | String | - | -
+`suffix-icon` | 输入框尾部图标 | String | - | -
 ### Events
 |事件名称|说明|会调参数|
-|---------|-------|-----|
-|click|点击操作| - |
+--- | --- | --- | 
+`change` | 在 Input 值改变时触发 | event

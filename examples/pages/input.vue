@@ -3,8 +3,7 @@
     <vx-input attr="attr" v-model="inputM" v-on:focus="handleBaseInputFocus" />
      <span class="c-size-s">输入内容为：{{ inputM }}</span>
      <hr>
-    <input type="text" v-model="inputN">
-    <span>{{inputN}}</span>
+     <vx-Input type="textarea" ></vx-Input>
   </div>
 </template>
 <script>

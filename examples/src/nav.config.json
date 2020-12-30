@@ -18,6 +18,10 @@
             {
               "path": "/input",
               "title": "Input"
+            },
+            {
+              "path": "/inputNumber",
+              "title": "inputNumber"
             }
           ]
         },

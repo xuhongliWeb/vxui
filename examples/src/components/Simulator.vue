@@ -44,18 +44,19 @@ export default {
 
 <style lang="scss" scoped>
 .vx-doc-simulator {
-  position: absolute;
-  top: 20px;
-  right: 20%;
+  position: fixed;
+  top: 0;
+  right: 0;
   z-index: 1;
   box-sizing: border-box;
   width: 375px;
   overflow: hidden;
   background: #fafafa;
+  border: 10px solid #000;
   box-shadow: 0 8px 12px #ebedf0;
   &-fixed {
     position: fixed;
-    top: 20px;
+    top: 0;
   }
 }
 

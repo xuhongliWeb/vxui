@@ -4,7 +4,7 @@
     <div class="main-content">
       <div class="page-container clearfix">
         <side-nav :data="navConfig['zh-CN']" base="/component"></side-nav>
-        <Simulator :key="$route.fullPath" :src="href"/>
+        <Simulator :src="href"/>
         <div class="page-content">
           <router-view></router-view>
         </div>
@@ -29,6 +29,11 @@ export default {
       
       href:location.origin+'/mobile.html'+location.hash
       // http://localhost:8081/mobile.html#/component/button
+    }
+  },
+  watch: {
+    $route() {
+      this.href = location.origin+'/mobile.html'+location.hash
     }
   }
 }

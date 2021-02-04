@@ -26,6 +26,24 @@
           ]
         },
         {
+          "groupName": "notice",
+          "list": [
+            {
+              "path": "/message",
+              "title": "message"
+            }
+          ]
+        },
+        {
+          "groupName": "表单组件",
+          "list": [
+            {
+              "path": "/slider",
+              "title": "slider"
+            }
+          ]
+        },
+        {
           "groupName": "练习专用",
           "list": [
             {
@@ -50,8 +68,8 @@
           "groupName": "反馈组件",
           "list": [
             {
-              "path": "/hello",
-              "title": "Hello"
+              "path": "/topic",
+              "title": "答题"
             },
             {
               "path": "/button",

@@ -1,3 +1,4 @@
+import Vue from 'vue'
 import Hello from '../packages/hello'
 import Button from '../packages/button'
 import Input from '../packages/input'
@@ -7,8 +8,11 @@ import vmodel from '../packages/vmodel'
 import vmodel2 from '../packages/vmodel2'
 import vxPromise from '../packages/Promise'
 import vxInputNumber from '../packages/inputNumber'
-
-const arr = [Hello, Button, debounce, throttle, Input, vmodel, vmodel2, vxPromise, vxInputNumber]
+import vxTopic from '../packages/topic'
+import vxSlider from '../packages/slider'
+import vxMessage from '../packages/message'
+Vue.use(vxMessage)
+const arr = [vxTopic, vxSlider, Hello, Button, debounce, throttle, Input, vmodel, vmodel2, vxPromise, vxInputNumber]
 const install = function (Vue) {
   if (install.installed) return
   arr.forEach((item) => {

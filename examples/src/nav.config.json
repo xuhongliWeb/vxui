@@ -61,6 +61,10 @@
             {
               "path": "/Promise",
               "title": "Promise的实现"
+            },
+            {
+              "path": "/after",
+              "title": "解决异步问题"
             }
           ]
         },

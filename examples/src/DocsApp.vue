@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import 'highlight.js/styles/atom-one-dark.css'
+// import 'highlight.js/styles/atom-one-dark.css'
 import navConfig from './nav.config.json'
 import PageHeader from './components/page-header'
 import SideNav from './components/side-nav'

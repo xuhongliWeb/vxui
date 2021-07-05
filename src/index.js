@@ -8,8 +8,9 @@ import vmodel2 from '../packages/vmodel2'
 import vxPromise from '../packages/Promise'
 import vxInputNumber from '../packages/inputNumber'
 import vxAfter from '../packages/after'
+import vxSurvey from '../packages/survey'
 
-const arr = [vxAfter, Hello, Button, debounce, throttle, Input, vmodel, vmodel2, vxPromise, vxInputNumber]
+const arr = [vxSurvey, vxAfter, Hello, Button, debounce, throttle, Input, vmodel, vmodel2, vxPromise, vxInputNumber]
 const install = function (Vue) {
   if (install.installed) return
   arr.forEach((item) => {

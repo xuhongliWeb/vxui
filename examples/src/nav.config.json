@@ -72,7 +72,7 @@
           "groupName": "反馈组件",
           "list": [
             {
-              "path": "/topic",
+              "path": "/survey",
               "title": "答题"
             },
             {

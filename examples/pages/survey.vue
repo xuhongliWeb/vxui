@@ -1,6 +1,7 @@
 <template>
   <div class="survey">
-    <vx-topic
+    答题
+    <vx-survey
       :data="topicData"
       ref="survey"
     />
@@ -12,7 +13,6 @@ export default {
 
   data() {
     return {
-    
       topicData: [],
       code: "",
       num: 0,
